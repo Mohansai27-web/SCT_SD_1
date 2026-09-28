@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TempConvert | Temperature Converter</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>Temp</span><b>Convert</b>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#converter">Converter</a>
+            <a href="#formulas">Formulas</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                <span>Temperature</span>
+                <strong>Converter</strong>
+            </h1>
+
+            <p>
+                Convert temperatures easily between
+                Celsius, Fahrenheit and Kelvin.
+            </p>
+
+            <a href="#converter" class="start-btn">
+                Start Converting
+            </a>
+
+        </div>
+
+
+        <!-- 3D Thermometer -->
+        <div class="thermometer-area">
+
+            <div class="thermometer-3d">
+
+                <div class="thermo-tube">
+                    <div class="mercury"></div>
+                </div>
+
+                <div class="thermo-bulb"></div>
+
+            </div>
+
+            <div class="temperature-number">
+                °C
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONVERTER -->
+    <section id="converter" class="section">
+
+        <h2 class="section-title">
+            Temperature <span>Converter</span>
+        </h2>
+
+        <div class="converter-container">
+
+            <div class="input-box">
+
+                <label>Enter Temperature</label>
+
+                <input
+                    type="number"
+                    id="temperatureInput"
+                    placeholder="Enter value"
+                >
+
+                <label>Convert From</label>
+
+                <select id="fromUnit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+
+                <label>Convert To</label>
+
+                <select id="toUnit">
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="C">Celsius (°C)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+
+                <button onclick="convertTemperature()">
+                    Convert Temperature
+                </button>
+
+                <button class="clear-btn" onclick="clearConverter()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <h3>Converted Temperature</h3>
+
+                <div id="result">
+                    0
+                </div>
+
+                <div id="resultUnit">
+                    Enter a value
+                </div>
+
+                <div class="mini-3d">
+
+                    <div class="mini-ball"></div>
+
+                    <div class="mini-tube">
+                        <div class="mini-liquid"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMULAS -->
+    <section id="formulas" class="section formulas-section">
+
+        <h2 class="section-title">
+            Conversion <span>Formulas</span>
+        </h2>
+
+        <div class="formula-grid">
+
+            <div class="formula-card">
+                <div class="formula-icon">°C</div>
+
+                <h3>Celsius → Fahrenheit</h3>
+
+                <p>
+                    °F = (°C × 9/5) + 32
+                </p>
+            </div>
+
+
+            <div class="formula-card">
+                <div class="formula-icon">°F</div>
+
+                <h3>Fahrenheit → Celsius</h3>
+
+                <p>
+                    °C = (°F − 32) × 5/9
+                </p>
+            </div>
+
+
+            <div class="formula-card">
+                <div class="formula-icon">K</div>
+
+                <h3>Celsius → Kelvin</h3>
+
+                <p>
+                    K = °C + 273.15
+                </p>
+            </div>
+
+
+            <div class="formula-card">
+                <div class="formula-icon">K</div>
+
+                <h3>Kelvin → Celsius</h3>
+
+                <p>
+                    °C = K − 273.15
+                </p>
+            </div>
+
+
+            <div class="formula-card">
+                <div class="formula-icon">°C</div>
+
+                <h3>Fahrenheit → Kelvin</h3>
+
+                <p>
+                    K = (°F − 32) × 5/9 + 273.15
+                </p>
+            </div>
+
+
+            <div class="formula-card">
+                <div class="formula-icon">°F</div>
+
+                <h3>Kelvin → Fahrenheit</h3>
+
+                <p>
+                    °F = (K − 273.15) × 9/5 + 32
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+        <h2 class="section-title">
+            About <span>The Project</span>
+        </h2>
+
+        <div class="about-card">
+
+            <h3>Temperature Conversion Web Application</h3>
+
+            <p>
+                This web application is developed using HTML, CSS and
+                JavaScript. It allows users to convert temperature values
+                between Celsius, Fahrenheit and Kelvin scales.
+            </p>
+
+            <p>
+                The project includes a modern user interface, colourful
+                headings, responsive design, animated 3D thermometer
+                graphics and real-time temperature conversion.
+            </p>
+
+            <div class="technology">
+
+                <div>
+                    <strong>HTML</strong>
+                    <span>Structure</span>
+                </div>
+
+                <div>
+                    <strong>CSS</strong>
+                    <span>Design & 3D Effects</span>
+                </div>
+
+                <div>
+                    <strong>JavaScript</strong>
+                    <span>Conversion Logic</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 TempConvert | Temperature Converter
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
