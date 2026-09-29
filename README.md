@@ -37,4 +37,4 @@ This repository contains the solution for **Task 01** assigned by **SkillCraft T
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/SCT_SD_01.git](https://github.com/your-username/SCT_SD_01.git)
+   git clone [https://github.com/Mohansai27-web/SCT_SD_1.git]
